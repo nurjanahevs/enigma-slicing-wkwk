@@ -1,0 +1,161 @@
+html,
+body,
+section,
+.carousel,
+.carousel-inner,
+.carousel-item {
+  height: 100%;
+}
+
+.carousel-inner .carousel-item > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: zoomin 10s linear infinite;
+}
+
+@keyframes zoomin {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.carousel-indicators {
+  button {
+    border-radius: 50%;
+    width: 10px !important;
+    height: 10px !important;
+  }
+  button.active {
+    background-color: $color-1 !important;
+  }
+}
+
+.navbar {
+  background: transparent;
+}
+
+.navbar-brand {
+  margin-right: 80px !important;
+}
+
+.button {
+  margin-left: 80px !important;
+}
+
+.carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: inherit;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+#login {
+  margin-right: 1px;
+  font-size: 11px;
+  border: 2px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  padding: 8px 12px;
+}
+
+#regist {
+  font-size: 11px;
+  border: 2px;
+  padding: 8px 12px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.carousel-caption {
+  top: auto;
+  bottom: 0;
+  text-align: left;
+}
+
+.carousel-caption h1 {
+  z-index: 6;
+  white-space: nowrap;
+  font-size: 65px;
+  line-height: 66px;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 0px;
+  font-family: "Roboto", sans-serif;
+  text-align: left;
+}
+
+.carousel-caption p {
+  /* font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: left; */
+  z-index: 5;
+  white-space: nowrap;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #ebf1f6;
+  letter-spacing: 1px;
+  font-family: Roboto;
+  text-align: left;
+}
+
+li a {
+  float: left;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: relative;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+li a::after {
+  background-color: #00bfff;
+  padding: 0;
+  content: "";
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  transition: width 0.35s ease 0s;
+  position: absolute;
+  margin: auto;
+}
+
+li a:hover::after {
+  width: 100%;
+}
+
+.navbar-nav {
+  flex: 1;
+  margin: auto !important;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* submenu */
+.show:hover .list-categories {
+  max-height: inherit;
+  opacity: 1;
+  color: white;
+}
+
+.list-categories {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  max-height: 0px;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 300ms ease;
+}
